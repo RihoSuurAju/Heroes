@@ -27,29 +27,7 @@ namespace Heroes_Haavasalu
 
 		public override string ToString()
 		{
-			return $"Hello! My name is {name}, and I come from {location}";
+			return $"The hero {name} resides in {location}.";
 		}
-	}
-
-	class Superhero : Hero
-	{
-		double skill;
-
-		public Superhero(string name, string location) : base(name, location)
-		{
-			Random r = new Random();
-			skill = r.Next(1, 5);
-		}
-
-		public override string ToString()
-		{
-			return $"Superhero: {Name} \nLocation: {Location} \nSkill: {skill}";
-		}
-
-		public override int Rescue(int amountofPeople)
-		{
-			return (int)Math.Round(amountofPeople * 0.95 + skill);
-		}
-
 	}
 }

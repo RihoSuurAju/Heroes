@@ -15,13 +15,17 @@ namespace Heroes_Haavasalu
 			Hero hero = new Hero("nunya", "Earth");
 			Console.WriteLine("His name is " + hero.Name);
 			Console.WriteLine("He resides within " + hero.Location);
-			int rescued = hero.Rescue(r.Next(1,1000000));
-			Console.WriteLine(hero + $"\nThis hero has saved {rescued} people.");
+			int people = hero.Rescue(r.Next(1,1000000));
+			Console.WriteLine(hero + $"\nThis hero has saved {people} people.");
 			Console.WriteLine();
 
-			Superhero superhero = new Superhero("Jimmy Neutron", "Retroville");
-			int superRescued = superhero.Rescue(100);
-			Console.WriteLine(superhero + $"\nThis superhero has rescued {superRescued} people.");
+			for (int i = 0; i < 10; i++)
+			{
+				Superhero superhero = new Superhero("Jimmy Neutron", "Retroville");
+				people = hero.Rescue(1000);
+				Console.WriteLine(superhero + $"\nThis superhero has rescued {people} people.");
+				Console.WriteLine();
+			}
 			Console.ReadLine();
 		}
 	}
