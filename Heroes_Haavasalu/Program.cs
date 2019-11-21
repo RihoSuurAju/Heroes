@@ -12,7 +12,6 @@ namespace Heroes_Haavasalu
 		private static List<Hero> heroes = new List<Hero>();
 		private static void LoadHeroesFromFile(string Filename)
 		{
-			//TODO load file, parse data, add to heroes list
 			string[] data = File.ReadAllLines(Filename);
 			for (int i = 0; i < data.Length; i++)
 			{
@@ -52,10 +51,10 @@ namespace Heroes_Haavasalu
 			Console.WriteLine();
 
 			LoadHeroesFromFile("heroes.txt");
-			foreach (Hero hero in heroes)
+			foreach (Hero heroo in heroes)
 			{
-				Console.WriteLine(hero);
-				Console.WriteLine($"This hero has saved {hero.Rescue(1000)} people.");
+				Console.WriteLine(heroo);
+				Console.WriteLine($"This hero has saved {heroo.Rescue(1000)} people.");
 			}
 			Console.ReadLine();
 		}
